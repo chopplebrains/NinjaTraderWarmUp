@@ -88,26 +88,3 @@ namespace NinjaTrader.NinjaScript.Indicators
         #endregion
     }
 }
-
-#region NinjaScript generated code. Neither change nor remove.
-namespace NinjaTrader.NinjaScript.Indicators
-{
-    public partial class Indicator : NinjaTrader.Gui.NinjaScript.IndicatorRenderBase
-    {
-        private WarmUpMA[] cacheWarmUpMA;
-        public WarmUpMA WarmUpMA(int fastPeriod, int slowPeriod)
-        {
-            return WarmUpMA(Input, fastPeriod, slowPeriod);
-        }
-
-        public WarmUpMA WarmUpMA(ISeries<double> input, int fastPeriod, int slowPeriod)
-        {
-            if (cacheWarmUpMA != null)
-                for (int idx = 0; idx < cacheWarmUpMA.Length; idx++)
-                    if (cacheWarmUpMA[idx] != null && cacheWarmUpMA[idx].FastPeriod == fastPeriod && cacheWarmUpMA[idx].SlowPeriod == slowPeriod && cacheWarmUpMA[idx].EqualsInput(input))
-                        return cacheWarmUpMA[idx];
-            return CacheIndicator<WarmUpMA>(new WarmUpMA() { FastPeriod = fastPeriod, SlowPeriod = slowPeriod }, input, ref cacheWarmUpMA);
-        }
-    }
-}
-#endregion
