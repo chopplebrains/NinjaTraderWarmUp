@@ -3,9 +3,12 @@ using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Media;
+using System.Xml.Serialization;
 using NinjaTrader.Gui;
+using NinjaTrader.Gui.Chart;
+using NinjaTrader.Data;
 using NinjaTrader.NinjaScript;
-using NinjaTrader.NinjaScript.Indicators;
+using NinjaTrader.Core.FloatingPoint;
 #endregion
 
 namespace NinjaTrader.NinjaScript.Indicators
